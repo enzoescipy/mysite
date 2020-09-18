@@ -1,6 +1,8 @@
 from django.db import models
 
 class GPSTime(models.Model):
+    id = models.IntegerField()
+
     lat = models.CharField(max_length=200)
     long = models.CharField(max_length=200)
 

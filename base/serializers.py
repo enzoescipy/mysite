@@ -4,4 +4,4 @@ from .models import GPSTime
 class GPSTimeSerializer(serializers.ModelSerializer):
     class Meta:
         model = GPSTime
-        fields = ('lat', 'long','year', 'month','date','hour','minute','second')
+        fields = ('id','lat', 'long','year', 'month','date','hour','minute','second')

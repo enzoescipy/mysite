@@ -1,8 +1,8 @@
 from django.db import models
 
 class GPSTime(models.Model):
-    lat = models.DecimalField(decimal_places=8, max_digits=10)
-    long = models.DecimalField(decimal_places=8, max_digits=10)
+    lat = models.CharField(max_length=200)
+    long = models.CharField(max_length=200)
 
     year = models.IntegerField()
     month = models.IntegerField()

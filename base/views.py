@@ -22,3 +22,4 @@ def dataposter(request):
 def datadeleter(request, id):
     instance = GPSTime.objects.get(id=id)
     instance.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)

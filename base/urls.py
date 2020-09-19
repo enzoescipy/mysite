@@ -1,8 +1,10 @@
-from django.urls import path, include
-from .views import datashower, dataposter, datadeleter
+from django.conf.urls import url, include
+from .views import GPSTimeViewSet
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('GPS', GPSTimeViewSet)
 
 urlpatterns = [
-    path("shower/", datashower),
-    path("poster/", dataposter),
-    path("deleter/<int:id>/", datadeleter)
+    url(r'^', include(router.urls))
 ]

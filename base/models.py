@@ -12,3 +12,6 @@ class GPSTime(models.Model):
     hour = models.IntegerField()
     minute = models.IntegerField()
     second = models.IntegerField()
+
+    def __str__(self):
+        return self.id
